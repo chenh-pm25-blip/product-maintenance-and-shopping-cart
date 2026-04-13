@@ -35,7 +35,7 @@ if (is_post()) {
     }
 
     if (!$_err) {
-        $photo = save_photo($f, root('photos'));
+        $photo = save_photo($f, '../photos');
         $stm = $_db->prepare('INSERT INTO product (category_id, name, description, price, stock_quantity, photo) VALUES (?, ?, ?, ?, ?, ?)');
         $stm->execute([$category_id, $name, $description, $price, $stock_quantity, $photo]);
 
