@@ -42,7 +42,7 @@ if (is_post()) {
     if (!$_err) {
         if ($f) {
             unlink(root("photos/$p->photo"));
-            $photo = save_photo($f, root('photos'));
+            $photo = save_photo($f, '../photos');
             $stm = $_db->prepare('UPDATE product SET category_id = ?, name = ?, description = ?, price = ?, stock_quantity = ?, photo = ? WHERE product_id = ?');
             $stm->execute([$category_id, $name, $description, $price, $stock_quantity, $photo, $product_id]);
         } else {
