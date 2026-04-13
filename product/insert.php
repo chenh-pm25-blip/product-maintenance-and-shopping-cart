@@ -71,7 +71,7 @@ require '../_head.php';
 
     <label for="photo">Photo</label>
     <label class="upload">
-        <img src="/images/favicon.png">
+        <img src="/images/photo.jpg">
         <?= html_file('photo', 'image/*', 'hidden') ?>
     </label>
     <?= err('photo') ?>
